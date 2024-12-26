@@ -1,0 +1,35 @@
+<script>
+
+
+
+
+function addMoney(account,deposit){
+    account+=deposit;
+    checkAccount(account);
+    return account;
+}
+function withdrawMoney(account, withdraw){
+    account-=withdraw;
+    if(withdraw>account){
+        console.log("Withdraw was successful.")
+    }
+    else{
+        account-=50;
+        console.log("Withdraw was successful. Your account was overdrawn - you were charged a 50 dollar penalty.")
+    }
+    checkAccount(account);
+    return account;
+}
+function checkAccount(account){
+    console.log(`You currently have $${account} in your account.`)
+}
+
+let bankAccount =0;
+checkAccount(bankAccount);
+bankAccount=addMoney(bankAccount,50);
+bankAccount=withdrawMoney(bankAccount,50);
+bankAccount=withdrawMoney(bankAccount,100);
+
+
+
+</script>

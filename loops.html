@@ -1,0 +1,16 @@
+<script>
+
+let loggedIn=true;
+
+if(loggedIn==true){
+    let cart= ['Shirts', 'Shoes', 'Bread', 'Cell Phone', 'Candy Corn', 'The Pragmatic Programmer: Your Journey To Mastery, 20th Anniversary Edition (2nd Edition)', 'Tomato'];
+    for(item in cart){
+        console.log(`Available item: ${cart[item]}`);
+    }
+}
+else{
+    console.log("You are not currently logged in. Please log in and try again.");
+}
+
+
+</script>
